@@ -7,13 +7,13 @@
 
 #include <intrin.h>
 
-#include "cpuinfo_impl.hpp"
+#include "cpuinfo.hpp"
 #include "extract_x86_flags.hpp"
 
 namespace cpuid
 {
 /// @todo docs
-void init_cpuinfo(cpuinfo::impl& info)
+void init_cpuinfo(cpuinfo& info)
 {
     int registers[4];
 

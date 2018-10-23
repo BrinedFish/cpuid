@@ -11,7 +11,9 @@ def build(bld):
         'DEFINES_STEINWURF_VERSION',
         'STEINWURF_CPUID_VERSION="{}"'.format(VERSION))
 
-    bld.recurse('src/cpuid')
+    bld(name='cpuid_includes',
+        includes='./src',
+        export_includes='./src')
 
     if bld.is_toplevel():
 

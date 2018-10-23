@@ -7,13 +7,6 @@
         "sources": ["github.com/steinwurf/waf-tools.git"]
     },
     {
-        "name": "platform",
-        "resolver": "git",
-        "method": "semver",
-        "major": 3,
-        "sources": ["github.com/steinwurf/platform.git"]
-    },
-    {
         "name": "boost",
         "internal": true,
         "resolver": "git",

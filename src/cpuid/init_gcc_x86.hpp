@@ -7,7 +7,7 @@
 
 #include <cstdint>
 
-#include "cpuinfo_impl.hpp"
+#include "cpuinfo.hpp"
 #include "extract_x86_flags.hpp"
 
 namespace cpuid
@@ -38,7 +38,7 @@ void run_cpuid(uint32_t eax, uint32_t ecx, uint32_t* abcd)
 }
 
 /// @todo Document
-void init_cpuinfo(cpuinfo::impl& info)
+void init_cpuinfo(cpuinfo& info)
 {
     // Note: We need to capture these 4 registers, otherwise we get
     // a segmentation fault on 32-bit Linux

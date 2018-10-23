@@ -7,11 +7,11 @@
 
 #include <cstdint>
 
-#include "cpuinfo_impl.hpp"
+#include "cpuinfo.hpp"
 
 namespace cpuid
 {
-void extract_x86_flags(cpuinfo::impl& info, uint32_t ecx, uint32_t edx)
+void extract_x86_flags(cpuinfo& info, uint32_t ecx, uint32_t edx)
 {
     // Instruction set flags
 
@@ -27,7 +27,7 @@ void extract_x86_flags(cpuinfo::impl& info, uint32_t ecx, uint32_t edx)
     info.m_has_avx = (ecx & (1 << 28)) != 0;
 }
 
-void extract_x86_extended_flags(cpuinfo::impl& info, uint32_t ebx)
+void extract_x86_extended_flags(cpuinfo& info, uint32_t ebx)
 {
     // Extended instruction set flags
 

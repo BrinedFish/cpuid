@@ -14,12 +14,12 @@
 #include <elf.h>
 #include <linux/auxvec.h>
 
-#include "cpuinfo_impl.hpp"
+#include "cpuinfo.hpp"
 
 namespace cpuid
 {
 /// @todo docs
-void init_cpuinfo(cpuinfo::impl& info)
+void init_cpuinfo(cpuinfo& info)
 {
 #if defined(__aarch64__)
     // The Advanced SIMD (NEON) instruction set is required on AArch64

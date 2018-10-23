@@ -5,12 +5,12 @@
 
 #pragma once
 
-#include "cpuinfo_impl.hpp"
+#include "cpuinfo.hpp"
 
 namespace cpuid
 {
 /// @todo docs
-void init_cpuinfo(cpuinfo::impl& info)
+void init_cpuinfo(cpuinfo& info)
 {
     (void) info;
 }
