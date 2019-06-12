@@ -14,7 +14,7 @@ project_dependencies = \
     [
         'waf-tools',
         'gtest',
-        'boost',
+        'cxxopts',
         'platform',
     ]
 

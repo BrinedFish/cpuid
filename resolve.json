@@ -14,12 +14,12 @@
         "sources": ["github.com/steinwurf/platform.git"]
     },
     {
-        "name": "boost",
+        "name": "cxxopts",
         "internal": true,
         "resolver": "git",
         "method": "semver",
-        "major": 3,
-        "sources": ["github.com/steinwurf/boost.git"]
+        "major": 1,
+        "sources": ["github.com/steinwurf/cxxopts.git"]
     },
     {
         "name": "gtest",
