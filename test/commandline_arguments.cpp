@@ -33,19 +33,19 @@ void parse_arguments(int argc, char** argv)
     cxxopts::Options options(argv[0], "command line options for tests");
 
     options.add_options()
-        ("no_fail", "The test should always return 0")
-        ("has_fpu", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_mmx", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_sse", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_sse2", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_sse3", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_ssse3", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_sse4_1", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_sse4_2", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_pclmulqdq", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_avx", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_avx2", "", cxxopts::value<bool>()->default_value("false"))
-        ("has_neon", "", cxxopts::value<bool>()->default_value("false"));
+    ("no_fail", "The test should always return 0")
+    ("has_fpu", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_mmx", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_sse", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_sse2", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_sse3", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_ssse3", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_sse4_1", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_sse4_2", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_pclmulqdq", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_avx", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_avx2", "", cxxopts::value<bool>()->default_value("false"))
+    ("has_neon", "", cxxopts::value<bool>()->default_value("false"));
 
     wrapper = std::make_shared<arguments_wrapper>(options, argc, argv);
 }

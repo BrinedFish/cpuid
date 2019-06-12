@@ -9,7 +9,6 @@
 
 namespace commandline
 {
-    void parse_arguments(int argc, char** argv);
-
-    cxxopts::ParseResult& arguments();
+void parse_arguments(int argc, char** argv);
+cxxopts::ParseResult& arguments();
 }
