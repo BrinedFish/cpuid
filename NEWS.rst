@@ -8,6 +8,13 @@ Latest
 ------
 * tbd
 
+6.0.0
+-----
+* Major: Moved internal files to the ``details`` folder.
+* Major: Added inline namespace for versioning.
+* Major: Added prepare_release function to wscript.
+* Major: Expose objects rather than static lib when used as a dependency.
+
 5.0.2
 -----
 * Patch: Fix the detection of the AVX2 instruction set on older CPUs. If the

@@ -5,6 +5,11 @@
 
 #pragma once
 
-//#include <cxxopts.hpp>
+#include <cxxopts.hpp>
 
-//extern std::shared_ptr<cxxopts::ParseResult> arguments;
+namespace commandline
+{
+    void parse_arguments(int argc, char** argv);
+
+    cxxopts::ParseResult& arguments();
+}

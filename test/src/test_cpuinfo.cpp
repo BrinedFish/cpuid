@@ -5,8 +5,6 @@
 
 #include <cpuid/cpuinfo.hpp>
 
-#include <cstdint>
-#include <iostream>
 #include <gtest/gtest.h>
 
 #include "../commandline_arguments.hpp"
@@ -14,10 +12,11 @@
 TEST(cpuinfo_tests, check_instruction_sets)
 {
     cpuid::cpuinfo m_cpuinfo;
-    EXPECT_EQ(true, m_cpuinfo.has_fpu());
+
+    auto arguments = commandline::arguments();
 
     // Check CPU capabilities
-    /*EXPECT_EQ(arguments["has_fpu"].as<bool>(), m_cpuinfo.has_fpu());
+    EXPECT_EQ(arguments["has_fpu"].as<bool>(), m_cpuinfo.has_fpu());
     EXPECT_EQ(arguments["has_mmx"].as<bool>(), m_cpuinfo.has_mmx());
     EXPECT_EQ(arguments["has_sse"].as<bool>(), m_cpuinfo.has_sse());
     EXPECT_EQ(arguments["has_sse2"].as<bool>(), m_cpuinfo.has_sse2());
@@ -29,5 +28,5 @@ TEST(cpuinfo_tests, check_instruction_sets)
               m_cpuinfo.has_pclmulqdq());
     EXPECT_EQ(arguments["has_avx"].as<bool>(), m_cpuinfo.has_avx());
     EXPECT_EQ(arguments["has_avx2"].as<bool>(), m_cpuinfo.has_avx2());
-    EXPECT_EQ(arguments["has_neon"].as<bool>(), m_cpuinfo.has_neon());*/
+    EXPECT_EQ(arguments["has_neon"].as<bool>(), m_cpuinfo.has_neon());
 }
