@@ -6,6 +6,8 @@ every change, see the Git log.
 
 Latest
 ------
+* Minor: Replaced the boost internal dependency with cxxopts to parse
+  command-line arguments in the unit tests.
 * Patch: Move options.log to build folder
 * Patch: Fix generator to build .o files when dependency and static lib when
   top-level.
